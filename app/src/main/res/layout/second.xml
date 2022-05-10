@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/page"
+        android:text="Create an account"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:fontFamily="@font/museosans_500"
+        app:layout_constraintStart_toEndOf="@id/guideline11"
+        app:layout_constraintBottom_toTopOf="@id/guideline18"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/emailtext"
+        android:text="Email address"
+        android:textColor="@color/white"
+        android:fontFamily="@font/museosans_300"
+        app:layout_constraintBottom_toTopOf="@id/guideline13"
+        app:layout_constraintStart_toEndOf="@id/guideline11"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/passtext"
+        android:text="Password"
+        android:textColor="@color/white"
+        android:fontFamily="@font/museosans_300"
+        app:layout_constraintBottom_toTopOf="@id/guideline14"
+        app:layout_constraintStart_toEndOf="@id/guideline11"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/repeattext"
+        android:text="Repeat Password"
+        android:textColor="@color/white"
+        android:fontFamily="@font/museosans_300"
+        app:layout_constraintBottom_toTopOf="@id/guideline15"
+        app:layout_constraintStart_toEndOf="@id/guideline11"
+        />
+    <TextView
+        android:layout_width="245dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/criteria"
+        android:text="Your password should have a minimum of 8 characters and contain at least one number, one uppercase and one lower case letter. You can use special characters."
+        android:textColor="@color/white"
+        android:textSize="12dp"
+        android:fontFamily="@font/museosans_300"
+        app:layout_constraintTop_toTopOf="@id/guideline19"
+        app:layout_constraintStart_toEndOf="@id/guideline11"
+        app:layout_constraintEnd_toStartOf="@id/guideline12"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:id="@+id/emaillayout"
+        app:layout_constraintLeft_toLeftOf="@id/guideline11"
+        app:layout_constraintTop_toTopOf="@id/guideline13">
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editEmail"
+        android:layout_width="245dp"
+        android:layout_height="45dp"
+        android:inputType="textEmailAddress"
+        app:layout_constraintTop_toTopOf="@id/guideline13"
+        app:layout_constraintLeft_toRightOf="@id/guideline11"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="245dp"
+        android:layout_height="50dp"
+        android:id="@+id/passlayout"
+        android:background="@color/white"
+        app:layout_constraintLeft_toLeftOf="@id/guideline11"
+        app:layout_constraintTop_toTopOf="@id/guideline14">
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editPass"
+        android:layout_width="245dp"
+        android:layout_height="45dp"
+        android:inputType="textPassword"
+        android:hint="See criteria below"
+        app:layout_constraintTop_toTopOf="@id/guideline14"
+        app:layout_constraintLeft_toRightOf="@id/guideline11"
+        />
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="245dp"
+        android:layout_height="50dp"
+        android:id="@+id/rpasslayout"
+        android:background="@color/white"
+        app:layout_constraintLeft_toLeftOf="@id/guideline11"
+        app:layout_constraintTop_toTopOf="@id/guideline15">
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editrPass"
+        android:layout_width="245dp"
+        android:layout_height="45dp"
+        android:inputType="textPassword"
+        app:layout_constraintTop_toTopOf="@id/guideline15"
+        app:layout_constraintLeft_toRightOf="@id/guideline11"
+        />
+    <Button
+        android:id="@+id/secondbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register Account"
+        android:textSize="20sp"
+        android:fontFamily="@font/museosans_500"
+        android:background="?android:selectableItemBackground"
+        app:layout_constraintStart_toStartOf="@id/guideline11"
+        app:layout_constraintEnd_toEndOf="@id/guideline12"
+        app:layout_constraintBottom_toBottomOf="@id/guideline10"/>
+    <ImageView
+        android:layout_width="@id/secondbtn"
+        android:layout_height="@id/secondbtn"
+        android:src="@drawable/grad"
+        app:layout_constraintStart_toStartOf="@id/secondbtn"
+        app:layout_constraintEnd_toEndOf="@id/secondbtn"
+        app:layout_constraintTop_toTopOf="@id/secondbtn"
+        app:layout_constraintBottom_toBottomOf="@id/secondbtn"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.2" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.8" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".3" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".4" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:src="@drawable/ic_baseline_arrow_back_ios_24"
+        app:layout_constraintBottom_toTopOf="@id/guideline18"
+        app:layout_constraintEnd_toStartOf="@id/guideline11"
+        android:background="?android:selectableItemBackground"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/white"
+        app:layout_constraintTop_toTopOf="@id/guideline20"
+        />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.7" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.12722299" />
+
+    <TextView
+        android:id="@+id/invalidpass"
+        android:layout_width="240dp"
+        android:layout_height="80dp"
+        android:fontFamily="@font/museosans_300"
+        android:text="Your password does not meet the minimum requirements"
+        android:drawableStart="@drawable/cross"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@id/guideline12"
+        app:layout_constraintTop_toBottomOf="@id/guideline21" />
+    <TextView
+        android:id="@+id/notmatch"
+        android:layout_width="240dp"
+        android:layout_height="80dp"
+        android:fontFamily="@font/museosans_300"
+        android:text="Your passwords do not match"
+        android:drawableStart="@drawable/cross"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@id/guideline12"
+        app:layout_constraintTop_toBottomOf="@id/guideline21" />
+
+    <TextView
+        android:id="@+id/invalidemail"
+        android:layout_width="240dp"
+        android:layout_height="80dp"
+        android:drawableStart="@drawable/cross"
+        android:fontFamily="@font/museosans_300"
+        android:text="Your email is invalid"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@id/guideline12"
+        app:layout_constraintTop_toBottomOf="@id/guideline21" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5923393" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
